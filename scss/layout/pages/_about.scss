@@ -1,0 +1,94 @@
+/** start about */
+
+@use "./helper/variables" as *;
+
+@use "./helper/mixin" as *;
+
+@use "./helper/placeholders" as *;
+
+.about-parent {
+  .main-text {
+    @extend %centertext;
+  }
+  .about-foot {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 20px;
+    justify-content: space-evenly;
+
+    .second-text {
+      padding: $mainpadding;
+      max-width: 570px;
+      p {
+        padding: $mainpadding 0;
+        margin: $mainpadding + 20px 0;
+        position: relative;
+        &::before {
+          content: "";
+          width: 50%;
+          height: 3px;
+          background-color: $fontcolor;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+
+      @include xs {
+        h3 {
+          font-size: 16px;
+        }
+        p {
+          font-size: 13px;
+        }
+      }
+    }
+
+    @include gt-md {
+      grid-template-columns: 450px auto;
+
+      second-text{
+       
+      }
+      .main-shape {
+        width: 190px;
+        height: 300px;
+        background-color: $fontcolor;
+        position: relative;
+        margin-left: calc(100% - 180px);
+        
+            
+        
+        &::before{
+            content: "";
+            width: 100px;
+            height: 230px;
+            background-color: #fff;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        .shape{
+            width: 300px;
+            height: 320px;
+            background-color: #f6f6f6;
+            top: 35px;
+            left: -240px;
+            position: absolute;
+            &::before{
+                content: "";
+                width: 110px;
+                height: 450px;
+                background-color: #fafafa;
+                position: absolute;
+                top: -60px;
+                left: -10px;
+                z-index: -1;
+            }
+        }
+      }
+    }
+  }
+}
+
+/** end about */

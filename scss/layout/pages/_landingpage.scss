@@ -1,0 +1,38 @@
+@use "./helper/variables" as *;
+
+
+
+@use "./helper/mixin" as *;
+
+
+@use "./helper/placeholders" as *;
+
+
+
+/*start lading*/
+
+
+.landing{
+    z-index: -1;
+    width: 100%;
+    position: relative;
+    background-image: image-set("/photos/landing.jpg");
+    background-size: cover;
+    height: calc(100vh - 84px);
+    flex-direction: column;
+    @extend %center-flex;
+    letter-spacing: $litterspacing;
+h1{
+    font-size: $big-font;
+    color: $fontcolor;
+    margin-bottom: 0;
+} 
+p{
+    
+    text-align: center;
+    font-weight: 400;
+}
+
+
+}
+/*end lading*/

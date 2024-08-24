@@ -1,0 +1,36 @@
+
+// import globle rules
+
+@use "./globle";
+
+
+
+
+
+
+// import headerpage
+
+@use "./pages/header" ;
+
+
+// import landingpage
+
+@use "./pages/landingpage" ;
+
+// import features
+
+@use "./pages/features" ;
+
+
+
+@use "./pages/services";
+
+
+
+@use "./pages/portfolio";
+
+
+
+@use "./pages/about";
+
+@use "./pages/contact";

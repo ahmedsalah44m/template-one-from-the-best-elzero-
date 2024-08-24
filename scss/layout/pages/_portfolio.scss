@@ -1,0 +1,32 @@
+
+@use "./helper/variables" as *;
+
+@use "./helper/mixin" as *;
+
+@use "./helper/placeholders" as *;
+
+
+
+
+/*Start Portfolio*/
+.parent-portfolio{
+    background-color: #fafafa;
+    .main-text{
+        @extend %centertext;
+    }
+    .projects{
+        @extend %three-grid;
+        padding: $mainpadding + 20px 0;
+        .box{
+            background-color: #ffff;
+            box-shadow:  0 0 9px -5px;
+            .text{
+                padding: $mainpadding - 5px;
+            }
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
+/*End Portfolio*/

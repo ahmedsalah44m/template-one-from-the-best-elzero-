@@ -1,0 +1,31 @@
+
+@use "./helper/variables" as *;
+
+@use "./helper/mixin" as *;
+
+@use "./helper/placeholders" as *;
+/*start feature*/
+
+
+.feature-parent{
+    background-color: $maincolor;
+    padding: $mainpadding + 50px  0 ;
+    @extend %three-grid;
+    text-align: center;
+    
+    >*{
+        margin: $mainpadding 0;
+        *{
+            margin: $smallpadding 0;
+        }
+        i{
+          
+         font-size: $big-font ; 
+        }
+
+
+    }
+    
+
+}
+/*end feature*/

@@ -1,0 +1,120 @@
+
+
+@use "./helper/variables" as *;
+
+
+
+@use "./helper/mixin" as *;
+
+
+
+
+
+/* start header*/
+
+
+.container {
+  
+
+  header {
+    padding: $mainpadding $mainpadding + 20px ;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+
+    @include gt-sm{
+    
+    padding: $mainpadding $mainpadding + 100px;
+    }
+
+
+    .logo {
+      width: 110px;
+    }
+
+    .icon {
+      width: 45px;
+    position: relative;
+      span {
+        background-color: black;
+        display: block;
+      
+        height: 3px;
+        margin-top:$smallpadding;
+        border-radius: $mainradius;
+        
+    }
+    *{
+        transition: $maintransition;
+    }
+
+      span:nth-child(2) {
+        width: 60%;
+        margin-left: 40%;
+      }
+
+
+
+
+      &:hover{
+
+    
+        span:nth-child(2) {
+            margin-left: 0;
+            width: 100%;
+            }
+
+            ul{
+                display: block;
+            }
+        }
+        
+        ul {
+            position: absolute;
+            list-style: none;
+            right: 10px;
+            top: 25px;
+            background-color: $maincolor;
+            display: none;
+            margin-top: $mainpadding ;
+            width: 200px;
+
+    
+            li {
+                
+                padding: $mainpadding  120px $mainpadding $mainpadding ;
+                a{
+                  letter-spacing: $litterspacing;
+                color: $secoundcolor;
+                text-decoration: none;
+                }
+
+                &:hover{
+                    padding-left:30px ;
+                }
+
+            }
+            
+            li:not(:last-child){
+                border-bottom: 1px solid $thirdcolor;
+            }
+    
+            &::after{
+                content: "";
+                position: absolute;
+                border: 10px solid;
+                border-color: transparent transparent $maincolor transparent ;
+                top: -19px;
+                right: 10px;
+            }
+          }
+        
+      }
+      
+    }
+    
+  }
+
+
+
+/** end header*/

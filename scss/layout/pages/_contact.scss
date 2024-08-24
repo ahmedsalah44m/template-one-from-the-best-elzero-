@@ -1,0 +1,63 @@
+/*start contact*/
+@use "./helper/variables" as *;
+
+@use "./helper/mixin" as *;
+
+@use "./helper/placeholders" as *;
+
+
+.contact-parent{
+    background-color: #fafafa;
+    padding-bottom: 100px;
+    .main-text{
+        @extend %centertext;
+    }
+    .second-text{
+        margin-left: 15px;
+        p:first-child{
+            color: $fontcolor;
+            font-size: 25px;
+            font-weight: 900;
+            letter-spacing: -0.9px;
+        }
+        p:nth-child(2){
+            margin: 0 0 0 20px;
+            font-weight: 800;
+        }
+        span{
+            margin: 0px 18px;
+            font-size: 16px;
+        }
+        @include gt-xs{
+            margin-left: 50px;
+            p:first-child{
+                font-size: 30px;
+            }
+            p:nth-child(2){
+                font-size: 23px;
+            }
+            span{
+                margin: 0px 30px;
+                font-size: 16px;
+            }
+            i{
+                margin: 5px;
+                font-size: 25px;
+            }
+        }
+    }
+}
+/*end contact*/
+/*start footer*/
+footer{
+    text-align: center;
+    padding: 30px 0 ;
+    background-color: #0a4755;
+    color: #fff;
+    font-weight: bold;
+    span{
+        color: $fontcolor;
+    }
+}
+/*end footer*/
+
